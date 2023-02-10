@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+*{
+    font-family:'Roboto', sans-serif;
+    font-size: 1.125rem;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    top: 50%;
+    left: 50%;
+    margin: 0 auto;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 16rem;
+    background-color: brown;
+    text-align: center;
+    border: 10px solid brown;
+    border-radius: 5px;
+}
+.keypad{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(60px auto);
+}
+input[type="text"]{
+    height: 75px;
+    width: 16rem;
+    border: 0px;
+    color: #fff;
+    background-color: brown;
+    text-align: right;
+    font-size: 1.563rem;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+#clear{
+    grid-column: 1/3;
+    grid-row: 1;
+    color: #262834;   
+}
+#result{
+    grid-column: 3/5;
+    grid-row: 5;
+    color: #262834;
+}
+#backspace{
+    color: #262834;
+}
+button{
+    margin: 5px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #262834;    
+    color: #fff;
+    font-weight: 500;
+    line-height: 2rem;
+}
+input:focus,
+input:active,
+button:focus,
+button:active{
+    outline: none;
+}
+.highlight{
+    background-color: #56cbdb;
+}
